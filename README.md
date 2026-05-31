@@ -44,19 +44,6 @@ Evaluates the candidate text against a configurable **Confidence Score** and a *
 * **LLM Fallback (Edge Case)**: If structural run-ons, severe syntax anomalies, or logical fragments remain, the gatekeeper flags the transcript as an **edge case** and routes it to `gpt-4o-mini` for final polishing. **(Latency: ~1.5s, Cost: ~$0.00003)**
 
 ---
-
-## 📊 Architectural Efficiency & Economic Impact
-
-By correcting transcripts progressively and routing only complex edge cases to the API, this system achieves a high-performance balance between speed, cost, and output quality:
-
-| Correction Stage | Latency | API Token Cost | Scalability | Best Used For |
-| :--- | :--- | :--- | :--- | :--- |
-| **Local Pipeline Stages** | **~100ms** | **$0.00 (FREE)** | Infinite (Local compute) | 90% of conversational speech, fillers, homophones, standard grammar |
-| **Intelligent Hybrid Routing** | **~100ms** *(if local)*<br>**~1600ms** *(if LLM fallback)* | **Near-Zero** *(Bypasses LLM for standard cases)* | High-performance hybrid | High-volume production speech products |
-| **All-LLM Baseline (Direct)** | **~1500ms** | **High** (Per-word billing) | Subject to API rate limits | Benchmarking & comparison |
-
----
-
 ## 📂 Project Structure
 
 ```
