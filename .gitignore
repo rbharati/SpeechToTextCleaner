@@ -1,0 +1,63 @@
+# ==========================================
+# Python Ignored Files & Folders
+# ==========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+pyvenv.cfg
+
+# Local environment variables / credentials (CRITICAL)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# React & Node (JavaScript/TypeScript)
+# ==========================================
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Production build outputs
+dist/
+build/
+out/
+
+# TypeScript build info cache
+*.tsbuildinfo
+
+# Local Certificates
+certs/
+voice-react/certs/
+
+# IDE / Editor configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
